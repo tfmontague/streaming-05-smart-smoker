@@ -27,48 +27,21 @@ Python will be used to:
 - Create three consumer processes, each one monitoring one of the temperature streams. 
 - Perform calculations to determine if a significant event has occurred.
 
-## Program Significant Events & Alerts
-
-The Smart Smoker program is designed to be triggered based on the following events:
-
-- Smoker Alert! Smoker temperature decreases by more than 15 degrees F in 2.5 minutes
-- Food Stall! Any food temperature changes less than 1 degree F in 10 minutes
-
-and to signal the following based on the events:
-
-- Alert the user when a significant event occurs
-- Send the user an email for each alert
+## NOTE: The focus of this repository is Creating a Producer. Information provided below is limited to executing the producer file. Additional guidance on executing the full Smart Smoker app will be provided in future repositories.
 
 ## Prerequisites
 
 - RabbitMQ server running
 - Pika installed in the active Python environment
-- Configure`.env.toml` with appropriate email configuration settings
-
-```python
-outgoing_email_host = "smtp.example.com"
-outgoing_email_port = 587
-outgoing_email_address = "your_email@example.com"
-outgoing_email_password = "your_password"
-```
 
 ## Running the Program
 
 - Open VS Code Terminal
-- Open 3 additional VS Code Terminals using the Split Terminal function
-- Run `python bbq-producer.py` in the 1st terminal
-- Run `python bbq-consumer-foodA.py` in the 2nd terminal
-- Run `python bbq-consumer-foodB.py` in the 3rd terminal
-- Run `python bbq-consumer-smoker.py` in the 4th terminal
+- Run `python bbq-producer.py`
 
-## Screenshots
+## Screenshot
 
-- Multiple Concurrent Processes
-![alt text](<Screenshot 2024-05-29 191842.png>)
+- BBQ Producer Process
+![alt text](<Screenshot 2024-05-29 210915.png>)
 
-
-- Email Alerts
-![alt text](image.png)
-
-![alt text](image-1.png)
 
